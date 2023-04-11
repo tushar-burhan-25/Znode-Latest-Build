@@ -1,9 +1,0 @@
-name: NDepend-DailyBuildAnalyis-Results
-on: [push]
-jobs:
-  check-bats-version:
-    runs-on: self-hosted
-    steps:
-      - name: Run a PowerShell script
-      
-        run: D:\NDependDailyBuild.ps1
