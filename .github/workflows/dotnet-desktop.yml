@@ -9,13 +9,13 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Send email
-        uses: "marvinpinto/action-email@v4.1.1"
+        uses: marvinpinto/action-email@v4.1.1
         with:
-           server_address: smtp.gmail.com
-           server_port: 587
-           username: 'tusharburhan97@gmail.com'
-           password: 'Tushar@2509'
-           from: tusharburhan97@gmail.com
-           to: tusharburhan97@gmail.com
-           subject: 'GitHub Action Email'
-           body: 'This email is sent from GitHub Actions'
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: 'tusharburhan97@gmail.com'
+          password: 'Tushar@2509'
+          from: tusharburhan97@gmail.com
+          to: tusharburhan97@gmail.com
+          subject: 'GitHub Action Email'
+          body: 'This email is sent from GitHub Actions'
