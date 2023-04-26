@@ -9,16 +9,13 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Send email
-        uses: dawidd6/action-send-mail@v3
+        uses: "marvinpinto/action-email@v4.1.1"
         with:
-          connection_url: ${{ secrets.MAIL_CONNECTION }}
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          username: 'tushar.burhan@amla.io'
-          password: 'Tushar@2509'
-          subject: Github Actions job result
-          to: tushar.burhan@amla.io,ashish.rasekar@amla.io
-          from: Luke Skywalker <user@example.com>
-          body: Build job of ${{ github.repository }} completed successfully!
-          priority: low
+           server_address: smtp.gmail.com
+           server_port: 587
+           username: 'tusharburhan97@gmail.com'
+           password: 'Tushar@2509'
+           from: tusharburhan97@gmail.com
+           to: tusharburhan97@gmail.com
+           subject: 'GitHub Action Email'
+           body: 'This email is sent from GitHub Actions'
