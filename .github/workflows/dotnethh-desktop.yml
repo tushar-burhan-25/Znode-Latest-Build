@@ -1,0 +1,23 @@
+name: .NET Core Desktop
+
+on:
+  push:
+  
+jobs:
+  send-email:
+    name: 'Sending Email with SendGrid'
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Send email
+        uses: mmeisels/action-send-an-email-@v1
+        with:
+          emailToAddress: 'test@mike.com'
+          emailFromAddress: 'from@mike.com'
+          emailBody: 'email body text - can be html also'
+          unSubscribeGroupID: 'unsubscribe group ID from step 3'
+          emailTemplateID: 'Email Template ID from Step 4'
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
