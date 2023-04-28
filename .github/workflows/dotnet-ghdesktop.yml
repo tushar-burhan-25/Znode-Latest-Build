@@ -1,0 +1,9 @@
+name: PowerShell Example
+on: [push]
+jobs:
+  run_script:
+    runs-on: self-hosted
+    steps:
+      - name: Run PowerShell script
+
+        run: D:\NDepend.ps1
